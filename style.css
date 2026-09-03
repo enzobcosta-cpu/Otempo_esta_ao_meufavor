@@ -1,91 +1,160 @@
-/* Configuração principal da página */
+/* =====================================================
+   BLOCO 1 - CONFIGURAÇÃO GERAL
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
 
-    /* Centraliza a caixa no meio da tela */
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 16px;
 }
 
 
-/* Estilo principal da caixa da pesquisa */
+/* =====================================================
+   BLOCO 2 - CAIXA PRINCIPAL
+   ===================================================== */
+
 .clima {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
+
     background-color: white;
 
-    /* Espaço interno */
-    padding: 50px;
+    padding: 30px;
 
-    /* Arredonda os cantos */
     border-radius: 15px;
 
-    /* Cria uma sombra */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
     text-align: center;
 }
 
 
-/* Estilo do título */
+/* =====================================================
+   BLOCO 3 - TÍTULO
+   ===================================================== */
+
 h1 {
-    font-size: 45px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 30px;
     color: #111;
 }
 
 
-/* Área de pesquisa */
+/* =====================================================
+   BLOCO 4 - ÁREA DE PESQUISA
+   ===================================================== */
+
 .pesquisa {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 
-    
     gap: 10px;
 }
 
 
-/* onde digita a cidade */
+/* =====================================================
+   BLOCO 5 - CAMPO DE TEXTO
+   ===================================================== */
+
 input {
-    width: 500px;
-    padding: 20px;
-    font-size: 18px;
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 12px;
+
+    font-size: 16px;
 
     border: 2px solid #aaa;
-    border-radius: 5px;
 
-    box-sizing: border-box;
+    border-radius: 5px;
 }
 
 
-/*  Estilo do botão */
+/* =====================================================
+   BLOCO 6 - BOTÃO
+   ===================================================== */
+
 button {
-    padding: 0 25px;
-    font-size: 18px;
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 12px 25px;
+
+    font-size: 17px;
+
     font-weight: bold;
 
     background-color: white;
+
     border: 2px solid #aaa;
+
     border-radius: 5px;
 
-    
-    
+    cursor: pointer;
 }
 
 
-/*  Efeito depois de passar o mouse no botão */
+/* =====================================================
+   BLOCO 7 - EFEITO DO BOTÃO
+   ===================================================== */
+
 button:hover {
     background-color: #eeeeee;
 }
 
 
-/* Estilo da mensagem */
+/* =====================================================
+   BLOCO 8 - MENSAGEM
+   ===================================================== */
+
 #mensagem {
-    margin-top: 35px;
-    font-size: 20px;
+    margin-top: 30px;
+
+    font-size: 18px;
+
     color: #333;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   BLOCO 9 - TELAS MAIORES
+   ===================================================== */
+
+@media (min-width: 600px) {
+
+    .clima {
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .pesquisa {
+        flex-direction: row;
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    button {
+        width: auto;
+        font-size: 18px;
+    }
 }

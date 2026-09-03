@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- Configurações da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Consulta do Clima</title>
-<link rel="stylesheet" href="style.css">
-    <style>
-      
-    </style>
+
+    <!-- Título -->
+    <title>Consulta do Clima</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Manifesto do PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Cor do aplicativo -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Ícone para dispositivos -->
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
 
 <body>
 
+    <!-- Caixa principal -->
     <div class="clima">
 
+        <!-- Título -->
         <h1>Consulta do Clima</h1>
 
+        <!-- Área de pesquisa -->
         <div class="pesquisa">
-            <input 
-                type="text" 
-                id="cidade" 
+
+            <!-- Campo para digitar a cidade -->
+            <input
+                type="text"
+                id="cidade"
                 placeholder="Digite uma cidade"
             >
 
-            <button onclick="buscarClima()">Buscar</button>
+            <!-- Botão de busca -->
+            <button id="buscar" onclick="buscarClima()">
+                Buscar
+            </button>
+
         </div>
 
+        <!-- Área onde aparece o resultado -->
         <p id="mensagem">
-pesquise por uma cidade
+            Digite uma cidade para consultar.
         </p>
 
     </div>
 
-    <script>
-        function buscarClima() {
-            let cidade = document.getElementById("cidade").value;
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
-            if (cidade === "") {
-                document.getElementById("mensagem").innerText =
-                    "Digite uma cidade para consultar.";
-            } else {
-                document.getElementById("mensagem").innerText =
-                    "Você pesquisou: " + cidade;
-            }
-        }
-    </script>
-<script src="script.js"></script>
 </body>
 </html>

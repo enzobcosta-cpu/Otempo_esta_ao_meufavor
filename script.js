@@ -136,7 +136,3 @@ function interpretarClima(codigo) {
 
     return "Condição desconhecida";
 }
-
-
-
- 
